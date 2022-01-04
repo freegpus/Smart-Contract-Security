@@ -44,6 +44,8 @@ Purpose of this repo is to serve as a center of coding mistakes, bugs, and fixes
 
 **<u>[Transactions/Sending Money](./transactions.md)</u>**
 
+**<u>[Assembly](./assembly.md)</u>**
+
 
 
 ###  :money_with_wings:Quick Reference :moneybag:
@@ -59,15 +61,28 @@ function myFunction() <visibility specifier> returns (bool) {
 ```
 
 - `public`: visible externally and internally (creates a [getter function](https://docs.soliditylang.org/en/v0.8.10/contracts.html#getter-functions) for storage/state variables)
+
 - `private`: only visible in the current contract
+
 - `external`: only visible externally (only for functions) - i.e. can only be message-called (via `this.func`)
+
 - `internal`: only visible internally
 
+  
 
-
-<u>Modifiers</u>
+## Function state modifiers
 
 Data on EVM = state
+
+**pure** and **view** are built-in **state modifiers**. They “promise” *how* functions will interact with data on the Ethereum blockchain state.
+
+- **pure**: functions that will neither read from nor modify the state.
+- **view**: functions that will only read, but not modify the state.
+- **default**: functions that will read and modify the blockchain state.
+
+**Note2**: a **pure** function can break its promise and modify the blockchain state, without any warning. (compiler version is important)
+
+If you want to know more about Solidity state modifiers, you can visit [this](https://docs.soliditylang.org/en/develop/contracts.html#view-functions).
 
 - `pure` for functions: Disallows modification or access of state. Good for math. Not reading any state.
 - `view` for functions: Disallows modification of state. Use with interfaces to prevent modification.
