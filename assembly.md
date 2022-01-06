@@ -1,5 +1,7 @@
 # Assembly & Low Level EVM Interaction
 
+Indepth assembly overview: https://medium.com/@this_post/ethernaut-21-shop-writeups-e99f3ebb9b7
+
 ## Assembly in solidity
 
 Solidity supports inline assembly in its code. Assembly gives you much more control to execute some logic that may not be possible with just Solidity. it’s useful for some goals like pointing to a memory slot and **Gas cost reduction**.
