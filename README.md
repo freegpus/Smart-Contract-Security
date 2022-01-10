@@ -46,6 +46,16 @@ Purpose of this repo is to serve as a center of coding mistakes, bugs, and fixes
 
 **<u>[Assembly](./assembly.md)</u>**
 
+[<u>**Decentralized Exchange**</u>](./dex.md)
+
+[<u>**Proxy/Logic Contracts**</u>](./proxy.md)
+
+
+
+### Flashbots
+
+**<u>[Flashbot Notes](./flashbot.md)</u>**
+
 
 
 ###  :money_with_wings:Quick Reference :moneybag:
